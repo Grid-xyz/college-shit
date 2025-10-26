@@ -29,8 +29,8 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("fuck u man");
 
-        
+        funcionario f1 = new funcionario("Igor", 3240, "pedreiro", 1200.5);
 
-        
+        System.out.println(f1.getNome());        
     }
 }
