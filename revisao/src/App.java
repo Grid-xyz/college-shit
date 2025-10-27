@@ -29,8 +29,18 @@ public class App {
     public static void main(String[] args) throws Exception {
         System.out.println("fuck u man");
 
-        funcionario f1 = new funcionario("Igor", 3240, "pedreiro", 1200.5);
+        funcionario f1 = new funcionario("Igor", 3240, "gerente", 1000);
 
-        System.out.println(f1.getNome());        
+        funcionario f2 = new funcionario("joao", 1234, "desenvolvedor", 1500);      
+
+        System.out.println(f1.getNome());
+        System.out.println("salario final de " + f1.calcularSalarioLiquido());
+        System.out.println("com o bonus de " + f1.calcularBonus());
+
+        System.out.println();
+
+        System.out.println(f2.getNome());
+        System.out.println("salario final de " + f2.calcularSalarioLiquido());
+        System.out.println("bonus de " + f2.calcularBonus());
     }
 }

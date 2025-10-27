@@ -24,12 +24,25 @@ public class funcionario {
             return this.cargo;
         }
 
-        public double getSalarioDuplo(){
+        public double getSalarioBruto(){
             return this.salarioBruto;
         }
 
 
-        
+    public double calcularSalarioLiquido(){
+        return this.salarioBruto - (this.salarioBruto * 0.15);
+    }
 
 
+    public double calcularBonus(){
+        if (cargo == "gerente"){
+            return this.salarioBruto * 0.2;
+        } else{
+            if(cargo == "desenvolvedor"){ 
+                return this.salarioBruto * 0.1;
+            } else {
+                return this.salarioBruto * 0.05;
+                }
+        } 
+    }
 }
