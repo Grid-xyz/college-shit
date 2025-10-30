@@ -39,7 +39,7 @@ public class funcionario {
     }
 
 
-    public double calcularBonus(){
+    public double calcularSalarioLiquido(){
         return getSalarioBruto() * 0.15;
     }
 }

@@ -1,5 +1,5 @@
-/*
-EXERCÍCIO
+
+ /*EXERCÍCIO
 
 Crie um sistema em java para calcular o salário líquido e o bônus
 dos funcionários de uma empresa.
@@ -10,7 +10,7 @@ dos funcionários de uma empresa.
    * Getters e Setters para cada atributo;
    * Receber o salarioBruto pelo setter;
    * Um metodo para calcularSalarioLiquido(), que deve 
-     retornar o salarioBruto com um desconto de 15% (impostos).
+     retornar o salarioBruto com um desconto de 15% (impostos)category:themes .
 
    * Uma classe estática com o metodo calcularBonus(), ao qual
      recebe o cargo (String) e o salarioBruto (double) e retorna
@@ -21,6 +21,7 @@ dos funcionários de uma empresa.
 
    * Na classe principal crie 2 objetos e mostre:
      * Nome, salarioLiquido e bonus de cada funcionario.
+
 */
 
 
@@ -28,11 +29,16 @@ public class App {
     public static void main(String[] args) throws Exception {
 
         funcionario f1 = new funcionario();
+        bonus b1 = new bonus();
 
-        f1.setSalarioBruto(1500);
-        f1.setCargo("desenvolvedor");
-        System.out.println(f1.calcularBonus());
 
-        f1.calcularBonus();
+        f1.setSalarioBruto(100);
+        f1.setCargo("estagiario");
+        
+        b1.calcularBonus(f1.getCargo(), f1.getSalarioBruto());
+
+        System.out.println(b1.calcularBonus(f1.getCargo(), f1.getSalarioBruto()));
+
+
     }
 }
